@@ -7,7 +7,9 @@ import {
   nestedSum,
   retireDe,
   aplatirRecursif,
-  permutations, echantillon,
+  permutations,
+  echantillon,
+  enumerer,
 } from '../src';
 
 describe('JS Basics Tests', () => {
@@ -254,7 +256,18 @@ describe('JS Basics Tests', () => {
    * Attention aux cas particuliers (tableaux à 0, 1 ou 2 éléments.)
    */
   describe('Test enumerer', () => {
-    // TODO
+    test('Tableau vide', () => {
+      expect(enumerer([],', ',' et ')).toEqual(undefined);
+    });
+    test('Tableau à un élément', () => {
+      expect(enumerer(['Riri'],', ',' et ')).toEqual("Riri");
+    });
+    test('Tableau à deux éléments', () => {
+      expect(enumerer(['Riri', 'Firi'],', ',' et ')).toEqual("Riri et Firi");
+    });
+    test('Tableau à plusieurs éléments', () => {
+      expect(enumerer(['Riri', 'Firi', 'Loulou'],', ',' et ')).toEqual("Riri, Firi et Loulou");
+    });
   });
 
   /**

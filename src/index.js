@@ -158,7 +158,13 @@ export const echantillon = tab => tab[Math.floor(Math.random() * tab.length)];
  * @param {string} fin
  */
 export const enumerer = (tab, separateur = ', ', fin = separateur) => {
-  // TODO
+  let result = tab[0];
+  if(tab.length > 0) {
+    for (let i = 1; i < tab.length; i++) {
+      i === tab.length -  1 ? result += fin + tab[i] : result += separateur + tab[i];
+    }
+  }
+  return result;
 };
 
 /**
