@@ -24,7 +24,14 @@ export const getFileExtension = str => {
  * @param {String} arr
  */
 export const longestString = arr => {
-  // TODO
+  let longestStr = 0; let str;
+  for(let i = 0; i < arr.length; i++) {
+    if(typeof arr[i] === 'string' && arr[i].length > longestStr) {
+      longestStr = arr[i].length;
+      str = arr[i];
+    }
+  }
+  return str;
 };
 
 /**
@@ -33,7 +40,7 @@ export const longestString = arr => {
  * @param {String} str
  */
 export const reverseString = str => {
-  // TODO
+  return str.split("").reverse().join("");
 };
 
 /**
