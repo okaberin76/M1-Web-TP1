@@ -1,4 +1,4 @@
-# JS Basics Lab [![pipeline status](https://www-apps.univ-lehavre.fr/forge/2020-2021-M1/WEB-jsbasics-lab/badges/master/pipeline.svg)](https://www-apps.univ-lehavre.fr/forge/2020-2021-M1/WEB-jsbasics-lab/commits/master)  [![coverage report](https://www-apps.univ-lehavre.fr/forge/2020-2021-M1/WEB-jsbasics-lab/badges/master/coverage.svg)](https://www-apps.univ-lehavre.fr/forge/2020-2021-M1/WEB-jsbasics-lab/commits/master)
+# JS Basics Lab [![pipeline status](https://www-apps.univ-lehavre.fr/forge/2020-2021-M1/WEB-jsbasics-lab/badges/master/pipeline.svg)](https://www-apps.univ-lehavre.fr/forge/bm142013/WEB-jsbasics-lab/commits/master)  [![coverage report](https://www-apps.univ-lehavre.fr/forge/bm142013/WEB-jsbasics-lab/badges/master/coverage.svg)](https://www-apps.univ-lehavre.fr/forge/bm142013/WEB-jsbasics-lab/commits/master)
 
 - Année : M1 IWOCS 2020-2021
 - Matière: WEB
@@ -6,9 +6,7 @@
 
 ## Auteur(s)
 
-|Nom|Prénom|login|email|
-|--|--|--|--|
-| *Nom auteur* | *Prénom auteur*| *login auteur* | *email auteur* |
+| *Bourgeaux* | *Maxence* | *bm142013* | *maxence.bourgeaux@etu.univ-lehavre.fr* |
 
 ## Travail à réaliser
 

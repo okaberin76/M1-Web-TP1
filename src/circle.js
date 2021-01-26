@@ -4,7 +4,7 @@
 // It should contain at least 3 hidden fields `x`, `y`, and `radius`.
 export function Circle() {
   // TODO
-};
+}
 
 
 
