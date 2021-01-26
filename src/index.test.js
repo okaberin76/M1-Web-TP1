@@ -7,7 +7,7 @@ import {
   nestedSum,
   retireDe,
   aplatirRecursif,
-  permutations,
+  permutations, echantillon,
 } from '../src';
 
 describe('JS Basics Tests', () => {
@@ -232,7 +232,13 @@ describe('JS Basics Tests', () => {
    *
    */
   describe('Test echantillon', () => {
-    // TODO
+    const mockMath = Object.create(global.Math);
+    mockMath.random = () => 0;
+    global.Math = mockMath;
+
+    test("Échantillon avec un nombre aléatoire égal à 0", () => {
+      expect(echantillon([0, 1, 2])).toEqual(0);
+    });
   });
 
   /**
