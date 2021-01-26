@@ -51,7 +51,9 @@ export const reverseString = str => {
  * @param {String} str
  */
 export const isPalindrome = str => {
-  // TODO
+  let leftStr = str.toLowerCase().replace(/[\W_]/g, '');
+  let rightStr = leftStr.split('').reverse().join('');
+  return leftStr === rightStr;
 };
 
 /**
