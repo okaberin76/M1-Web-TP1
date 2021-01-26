@@ -13,7 +13,7 @@
       "sourceType": "module"
     },
     "rules": {
-      "no-console": "off",
+      //"no-console": "off",
       "strict": ["error", "global"],
       "curly": "warn",
       "semi": "warn",
