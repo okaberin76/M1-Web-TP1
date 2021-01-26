@@ -205,7 +205,21 @@ describe('JS Basics Tests', () => {
    *
    */
   describe('Test permutations', () => {
-    // TODO
+    test("Tableau vide", () => {
+      expect(permutations([])).toEqual([]);
+    });
+    test("Tableau à un élément", () => {
+      expect(permutations([1])).toEqual([1]);
+    });
+    test("Tableau à deux éléments", () => {
+      expect(permutations([1, 2])).toEqual([[1, 2], [2, 1]]);
+    });
+    test("Tableau avec plusieurs éléments", () => {
+      expect(permutations([0, 1, 2])).toEqual([[0, 1, 2], [0, 2, 1], [1, 0, 2], [1, 2, 0], [2, 0, 1], [2, 1, 0]]);
+    });
+    test("Tableau avec doublons", () => {
+      expect(permutations([1, 1])).toEqual([[1, 1], [1, 1]]);
+    });
   });
 
   /**

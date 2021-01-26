@@ -169,5 +169,5 @@ export const enumerer = (tab, separateur = ', ', fin = separateur) => {
  * Utiliser `Array.prototype.sort()`, l'opérateur de destructuration (...) et `Array.prototype.slice()`
  */
 export const nMax = (tab, n = 1) => {
-  //TODO
+  // TODO
 };
