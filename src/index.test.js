@@ -234,12 +234,27 @@ describe('JS Basics Tests', () => {
    *
    */
   describe('Test echantillon', () => {
-    const mockMath = Object.create(global.Math);
-    mockMath.random = () => 0;
-    global.Math = mockMath;
+    Math.random = jest.fn();
+    Math.random.mockReturnValueOnce(0.5)
+      .mockReturnValueOnce(0.5)
+      .mockReturnValueOnce(0.25)
+      .mockReturnValueOnce(0.75)
+      .mockReturnValueOnce(0.5);
 
-    test("Échantillon avec un nombre aléatoire égal à 0", () => {
-      expect(echantillon([0, 1, 2])).toEqual(0);
+    test("Test avec un tableau vide et un random = 0.5", () => {
+      expect(echantillon([])).toEqual(undefined);
+    });
+    test("Test avec un tableau d'un élément et un random = 0.5", () => {
+      expect(echantillon([1])).toEqual(1);
+    });
+    test("Test avec un tableau de deux éléments et un random = 0.25", () => {
+      expect(echantillon([1, 5])).toEqual(1);
+    });
+    test("Test avec un tableau de deux éléments et un random = 0.75", () => {
+      expect(echantillon([1, 5])).toEqual(5);
+    });
+    test("Test avec un tableau de plusieurs éléments et un random = 0.5", () => {
+      expect(echantillon([1, 2, 3, 4, 5])).toEqual(3);
     });
   });
 
