@@ -9,7 +9,7 @@ import {
   aplatirRecursif,
   permutations,
   echantillon,
-  enumerer,
+  enumerer, nMax,
 } from '../src';
 
 describe('JS Basics Tests', () => {
@@ -301,6 +301,26 @@ describe('JS Basics Tests', () => {
    *
    */
   describe('Test nMax', () => {
-    // TODO
+    test('Tableau vide', () => {
+      expect((nMax([]))).toEqual([]);
+    });
+    test('Tableau avec un élément', () => {
+      expect((nMax([1]))).toEqual([1]);
+    });
+    test('Tableau avec deux éléments', () => {
+      expect((nMax([1, 2]))).toEqual([2]);
+    });
+    test('Tableau avec plusieurs éléments', () => {
+      expect((nMax([1, 3, 10, 5, 8]))).toEqual([10]);
+    });
+    test('Tableau avec plusieurs éléments etl n = 2', () => {
+      expect((nMax([1, 3, 10, 5, 8], 2))).toEqual([10, 8]);
+    });
+    test('Tableau avec des Strings', () => {
+      expect((nMax(['1', '3', '0']))).toEqual([]);
+    });
+    test('Tableau avec des numbers et des Strings', () => {
+      expect((nMax(['1', '3', '0', 15, 3, 5], 2))).toEqual([15, 5]);
+    });
   });
 });

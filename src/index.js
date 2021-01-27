@@ -46,9 +46,7 @@ export const longestString = arr => {
  * Return a new string who's characters are in the opposite order to str's.
  * @param {String} str
  */
-export const reverseString = str => {
-  return str.split('').reverse().join('');
-};
+export const reverseString = str => str.split('').reverse().join('');
 
 /**
  * `str` is a string.
@@ -193,6 +191,4 @@ export const enumerer = (tab, separateur = ', ', fin = separateur) => {
  *
  * Utiliser `Array.prototype.sort()`, l'opérateur de destructuration (...) et `Array.prototype.slice()`
  */
-export const nMax = (tab, n = 1) => {
-  // TODO
-};
+export const nMax = (tab, n = 1) => tab.filter(val => typeof val === 'number').sort((a, b) => b - a).slice(0, n);
