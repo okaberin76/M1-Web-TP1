@@ -69,10 +69,10 @@ export const isPalindrome = str => {
  */
 export const nestedSum = arr => {
   let result = 0;
-  for(let i = 0; i < arr.length; i++) {
-    if(typeof arr[i] === 'number') {result += arr[i];}
-    if(Array.isArray(arr[i])) {result += nestedSum(arr[i]);}
-  }
+  arr.forEach((val) => {
+    if(typeof val === 'number') {result += val;}
+    if(Array.isArray(val)) {result += nestedSum(val);}
+  });
   return result;
 };
 
