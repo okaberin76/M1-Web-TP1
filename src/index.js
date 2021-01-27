@@ -117,7 +117,12 @@ export const retireDe = (tab, ...elms) => {
  * // [5, 4, 3, 2, 1, 0]
  */
 export const aplatirRecursif = tab => {
-  //TODO
+  let result = [];
+  for(let val of tab) {
+    if(Array.isArray(val)) {result = result.concat(aplatirRecursif(val));}
+    else {result.push(val);}
+  }
+  return result;
 };
 
 /**
