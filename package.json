@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "jest --coverage --runTestsByPath src/index.test.js",
+    "testCircle": "jest --coverage --runTestsByPath src/circle.test.js",
     "pretest": "eslint src",
     "ci": "jest --ci --coverage --color=false --runTestsByPath src/index.test.js",
     "preci": "eslint --no-color src"
